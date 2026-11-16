@@ -1,18 +1,21 @@
-﻿
-# ðŸ’¬ Chatbot de Suporte IA
+﻿# Chatbot de Suporte IA
 
 Chatbot inteligente de atendimento ao cliente desenvolvido em Python, utilizando LangChain, Streamlit e Groq API.
 
-## ðŸš€ Funcionalidades
+## Objetivo do projeto
+
+Desenvolver um assistente virtual capaz de realizar atendimentos automatizados, manter o contexto das conversas e fornecer respostas utilizando Inteligência Artificial generativa.
+
+## Funcionalidades
 
 - Chat interativo para atendimento ao cliente.
-- MemÃ³ria de conversaÃ§Ã£o por sessÃ£o.
-- ContextualizaÃ§Ã£o das respostas com base no histÃ³rico.
-- CriaÃ§Ã£o de novas conversas.
-- Limpeza do histÃ³rico de mensagens.
-- Interface desenvolvida com Streamlit.
+- Memória de conversação por sessão.
+- Contextualização das respostas com base no histórico.
+- Criação de novas conversas.
+- Limpeza do histórico de mensagens.
+- Interface interativa desenvolvida com Streamlit.
 
-## ðŸ› ï¸ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Python
 - Streamlit
@@ -21,62 +24,24 @@ Chatbot inteligente de atendimento ao cliente desenvolvido em Python, utilizando
 - GPT-OSS 20B
 - Python-dotenv
 
-## âš™ï¸ Como executar o projeto
+## Arquitetura do projeto
 
-Clone o repositÃ³rio:
+- **Interface:** Streamlit para interação com o usuário.
+- **Processamento:** LangChain para organização dos fluxos de conversação.
+- **Modelo de IA:** GPT-OSS 20B por meio da Groq API.
+- **Memória:** gerenciamento do histórico de mensagens por sessão.
+- **Configuração:** Python-dotenv para gerenciamento de variáveis de ambiente.
 
-```bash
-git clone https://github.com/Arthur-Santana-projects077/chatbot-suporte-ia.git
-```
+## Melhorias futuras
 
-Entre na pasta:
+- Integração com banco de dados PostgreSQL.
+- Implementação de RAG para consulta a documentos.
+- Classificação automática de chamados.
+- Persistência do histórico de conversas.
+- Integração com dashboards e Power BI.
 
-```bash
-cd chatbot-suporte-ia
-```
+## Autor
 
-Crie e ative o ambiente virtual:
+**Arthur Santana**
 
-```bash
-python -m venv venv
-```
-
-No Windows PowerShell:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-Instale as dependÃªncias:
-
-```bash
-pip install -r requirements.txt
-```
-
-Configure sua chave da Groq em um arquivo `.env`:
-
-```env
-GROQ_API_KEY=sua_chave_aqui
-```
-
-Execute o aplicativo:
-
-```bash
-streamlit run app.py
-```
-
-## ðŸ” SeguranÃ§a
-
-A chave da API deve permanecer no arquivo `.env`, que nÃ£o deve ser publicado no GitHub.
-
-## ðŸ”® Melhorias futuras
-
-- IntegraÃ§Ã£o com banco de dados PostgreSQL.
-- ImplementaÃ§Ã£o de RAG para consulta a documentos.
-- ClassificaÃ§Ã£o automÃ¡tica de chamados.
-- IntegraÃ§Ã£o com dashboards e Power BI.
-
-## ðŸ‘¨â€ðŸ’» Autor
-
-Arthur Santana
-
+[GitHub](https://github.com/Arthur-Santana-projects077)
