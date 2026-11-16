@@ -1,18 +1,18 @@
-
-# 💬 Chatbot de Suporte IA
+﻿
+# ðŸ’¬ Chatbot de Suporte IA
 
 Chatbot inteligente de atendimento ao cliente desenvolvido em Python, utilizando LangChain, Streamlit e Groq API.
 
-## 🚀 Funcionalidades
+## ðŸš€ Funcionalidades
 
 - Chat interativo para atendimento ao cliente.
-- Memória de conversação por sessão.
-- Contextualização das respostas com base no histórico.
-- Criação de novas conversas.
-- Limpeza do histórico de mensagens.
+- MemÃ³ria de conversaÃ§Ã£o por sessÃ£o.
+- ContextualizaÃ§Ã£o das respostas com base no histÃ³rico.
+- CriaÃ§Ã£o de novas conversas.
+- Limpeza do histÃ³rico de mensagens.
 - Interface desenvolvida com Streamlit.
 
-## 🛠️ Tecnologias utilizadas
+## ðŸ› ï¸ Tecnologias utilizadas
 
 - Python
 - Streamlit
@@ -21,12 +21,12 @@ Chatbot inteligente de atendimento ao cliente desenvolvido em Python, utilizando
 - GPT-OSS 20B
 - Python-dotenv
 
-## ⚙️ Como executar o projeto
+## âš™ï¸ Como executar o projeto
 
-Clone o repositório:
+Clone o repositÃ³rio:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/chatbot-suporte-ia.git
+git clone https://github.com/Arthur-Santana-projects077/chatbot-suporte-ia.git
 ```
 
 Entre na pasta:
@@ -47,7 +47,7 @@ No Windows PowerShell:
 .\venv\Scripts\Activate.ps1
 ```
 
-Instale as dependências:
+Instale as dependÃªncias:
 
 ```bash
 pip install -r requirements.txt
@@ -65,17 +65,18 @@ Execute o aplicativo:
 streamlit run app.py
 ```
 
-## 🔐 Segurança
+## ðŸ” SeguranÃ§a
 
-A chave da API deve permanecer no arquivo `.env`, que não deve ser publicado no GitHub.
+A chave da API deve permanecer no arquivo `.env`, que nÃ£o deve ser publicado no GitHub.
 
-## 🔮 Melhorias futuras
+## ðŸ”® Melhorias futuras
 
-- Integração com banco de dados PostgreSQL.
-- Implementação de RAG para consulta a documentos.
-- Classificação automática de chamados.
-- Integração com dashboards e Power BI.
+- IntegraÃ§Ã£o com banco de dados PostgreSQL.
+- ImplementaÃ§Ã£o de RAG para consulta a documentos.
+- ClassificaÃ§Ã£o automÃ¡tica de chamados.
+- IntegraÃ§Ã£o com dashboards e Power BI.
 
-## 👨‍💻 Autor
+## ðŸ‘¨â€ðŸ’» Autor
 
 Arthur Santana
+
