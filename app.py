@@ -9,11 +9,6 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-
-# ==========================================
-# CONFIGURAÇÕES INICIAIS
-# ==========================================
-
 load_dotenv()
 
 st.set_page_config(
@@ -23,21 +18,27 @@ st.set_page_config(
 )
 
 
-# ==========================================
-# CONFIGURAÇÃO DO CHATBOT
-# ==========================================
+def obter_api_key():
+    try:
+        chave = st.secrets.get("GROQ_API_KEY")
+    except Exception:
+        chave = None
+
+    return chave or os.getenv("GROQ_API_KEY")
+
 
 @st.cache_resource
 def configurar_chatbot():
 
-    if not os.getenv("GROQ_API_KEY"):
-        raise ValueError(
-            "Chave GROQ_API_KEY não encontrada no arquivo .env."
-        )
+    api_key = obter_api_key()
+
+    if not api_key:
+        raise ValueError("GROQ_API_KEY não encontrada.")
 
     llm = ChatGroq(
         model="openai/gpt-oss-20b",
-        temperature=0.7
+        temperature=0.7,
+        api_key=api_key
     )
 
     prompt = ChatPromptTemplate.from_messages([
@@ -61,7 +62,6 @@ def configurar_chatbot():
     store = {}
 
     def get_session_history(session_id):
-
         if session_id not in store:
             store[session_id] = InMemoryChatMessageHistory()
 
@@ -75,6 +75,7 @@ def configurar_chatbot():
     )
 
     return chat
+
 
 
 # ==========================================
